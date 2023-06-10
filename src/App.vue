@@ -1,14 +1,32 @@
 <template>
   <div id="app">
-    <router-view>
+    <!--顶部-->
+    <Topbar></Topbar>
 
-    </router-view>
+    <!--头部-->
+    <Header></Header>
+
+    <!--内容-->
+    <router-view/>
+
+    <!--页尾-->
+    <Footer></Footer>
   </div>
 </template>
 
 <script>
+import Topbar from './components/Topbar.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+
+
 export default {
   name: 'App',
+  components:{
+    Topbar,
+    Header,
+    Footer,
+  }
 }
 </script>
 
@@ -20,4 +38,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+
+
 </style>
