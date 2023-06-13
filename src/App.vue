@@ -11,6 +11,8 @@
 
     <!--页尾-->
     <Footer></Footer>
+
+    <Login v-show="isShowLoginModal"></Login>
   </div>
 </template>
 
@@ -18,19 +20,32 @@
 import Topbar from './components/Topbar.vue'
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import Login from './components/Login.vue'
 
+import {mapState} from 'vuex';
 
 export default {
   name: 'App',
+  data() {
+    return {
+      
+    }
+  },
+  computed:{
+    ...mapState({
+      isShowLoginModal:state => state.showLoginModal.isShowLoginModal
+    })
+  },
   components:{
     Topbar,
     Header,
     Footer,
+    Login,
   }
 }
 </script>
 
-<style lang="less" >
+<style lang="less">
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

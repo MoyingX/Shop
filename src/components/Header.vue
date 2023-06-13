@@ -1,15 +1,67 @@
 <template>
-  <div>
-    头部
+  <div class="header wrap">
+    <h1><img src="@/assets/img/indexLogo.6f8ac4f0.png" alt=""></h1>
+    <ul class="nav">
+      <li :class="$route.path=='/home'?'active':''"  @click="$router.push('/home')">首页</li>
+      <li :class="$route.path=='/goods'?'active':''"  @click="$router.push('/goods')">全部商品</li>
+      <li :class="$route.path=='/user'?'active':''"  @click="$router.push('/user')">个人中心</li>
+      <li :class="$route.path=='/order'?'active':''"  @click="$router.push('/order')">我的订单</li>
+      <li :class="$route.path=='/free'?'active':''"  @click="$router.push('/free')">专属福利</li>
+    </ul>
+    <div class="search">
+      <input type="text" value="" placeholder="请输入想要搜索的内容">
+      <span><img width="20" height="20" src="@/assets/img/search.png" alt=""></span>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-    name:'Header'
+    name:'Header',
+    
 }
 </script>
 
-<style>
+<style lang="less" scoped>
+@import '../assets/css/global.less';
+.header{
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .nav{
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    li{
+      cursor: pointer;
+      &.active{
+        color: @base-color;
+        font-weight: bold;
+      }
+    }
+  }
 
+  .search{
+    display: flex;
+    input{
+      width: 214px;
+      height: 38px;
+      border: 1px solid #DEDEDE;
+      border-radius: 20px 0px 0px 20px;
+      text-indent: 12px;
+    }
+    span{
+      width: 50px;
+      height: 40px;
+      background: @base-color;
+      border-radius: 0px 20px 20px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+  }
+}
 </style>

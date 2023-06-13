@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
-import store  from 'vuex'
+import store  from './store/index'
 
 import "reset-css"
+import '@/assets/css/global.less'
 
 Vue.config.productionTip = false
 
