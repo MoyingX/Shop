@@ -1,6 +1,6 @@
 <template>
-  <div>
-   Order订单
+  <div style="text-align:center;">
+    <img src="@/assets/img/404.94e7c552.jpg" alt="">
   </div>
 </template>
 

@@ -1,7 +1,7 @@
-# jifen
+# jifen3
 
 #### Description
-积分商城
+崇州3期前端第1个项目
 
 #### Software Architecture
 Software architecture description
